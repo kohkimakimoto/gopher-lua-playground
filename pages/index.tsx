@@ -72,6 +72,12 @@ export default function Home() {
         <title>GopherLua Playground</title>
         <meta name="description" content="Run Lua code with GopherLua!" />
         <link rel="icon" href="/gopher-lua-playground/favicon.ico" />
+        <meta property="og:url" content="https://kohkimakimoto.github.io/gopher-lua-playground/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="GopherLua Playground" />
+        <meta property="og:description" content="Run Lua code with GopherLua!" />
+        <meta property="og:site_name" content="GopherLua Playground" />
+        <meta property="og:image" content="https://kohkimakimoto.github.io/gopher-lua-playground/logo.png" />
       </Head>
       <Flex flexDirection="column" h="100vh">
         <Header />
