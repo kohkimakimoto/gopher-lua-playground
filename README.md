@@ -2,6 +2,8 @@
 
 [GopherLua Playground](https://kohkimakimoto.github.io/gopher-lua-playground/) is a convenient website where you can play with [GopherLua](https://github.com/yuin/gopher-lua).
 
+![](screenshot.png)
+
 ## Technology Stack
 
 ### GopherLua
