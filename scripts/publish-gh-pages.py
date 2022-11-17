@@ -43,7 +43,7 @@ class GitHubPagesWorkspace(object):
 
         # copy files to the source branch
         os.chdir(self.wd)
-        subprocess.run('cp -pr "%(dir)s/" "%(worktreedir)s/"' % {"dir": dir, "worktreedir": self.worktreedir}, shell=True, check=True)
+        subprocess.run('cp -pr "%(dir)s/." "%(worktreedir)s/"' % {"dir": dir, "worktreedir": self.worktreedir}, shell=True, check=True)
         os.chdir(self.worktreedir)
         self._commit(message)
 
