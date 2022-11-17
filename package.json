@@ -1,0 +1,35 @@
+{
+  "name": "gopher-lua-playground",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "npm run build && mkdir -p docs && cp -pr out docs/gopher-lua-playground && serve docs",
+    "lint": "next lint --fix",
+    "format": "prettier --write \"{components,lib,pages}/**/*{js,jsx,ts,tsx}\""
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.3.7",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@monaco-editor/react": "^4.4.6",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.8",
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.3",
+    "framer-motion": "^6.5.1",
+    "next": "13.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "serve": "^14.1.1",
+    "typescript": "4.8.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  }
+}

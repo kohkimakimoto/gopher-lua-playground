@@ -1,0 +1,28 @@
+name: Publish
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: 1.19
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: make deps
+      - name: Build
+        run: make build
+      - name: Publish gh-pages
+        run:
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          ./scripts/publish-gh-pages.py publish out
+          git push origin gh-pages
